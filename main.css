@@ -1,0 +1,28 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  display: flexbox;
+  background: #B3E5FC;
+}
+header{
+  background: #0277BD;
+  color: #b71c1c;
+  width: 80%;
+  font-size: 2em;
+  text-align: center;
+  margin: 0 auto;
+}
+.profileImg{
+  width: 30%;
+  height: 40%;
+  margin-left: 35%;
+}
+footer{
+  background: #0277BD;
+  color: #b71c1c;
+  width: 80%;
+  font-size: 2em;
+  margin: 2% auto;
+}

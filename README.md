@@ -7,3 +7,4 @@
 ![alt text](https://github.com/JeanineHoffman/PattySchramm/blob/master/Mobile%20sketch/Page%203.jpg)
 
 ![alt text](https://github.com/JeanineHoffman/PattySchramm/blob/master/Mobile%20sketch/Page%204.jpg)
+
