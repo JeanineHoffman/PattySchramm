@@ -1,5 +1,5 @@
 # PattySchramm Author website
 
-![alt text](/images/MobileFirst page.jpeg)
+![alt text](https://github.com/JeanineHoffman/PattySchramm/blob/master/images/MobileFirst%20page.jpeg)
 
-[alt text](/images/mobile pages.jpeg)
+![alt text](https://github.com/JeanineHoffman/PattySchramm/blob/master/images/mobile%20pages.jpeg)
