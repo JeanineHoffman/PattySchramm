@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+.displayBooks{
+  display: inline;
+  margin: 0 auto;
+}
+
+.bookCover{
+  width: 40%;
+  justify-self: left;
+}
