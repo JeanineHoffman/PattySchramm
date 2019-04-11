@@ -95,3 +95,53 @@ let STORE =[
     coverAlt:"RBlue Collar Lesbian Erotica, Patty Schramm and Verda Foster, Editors",
   },
 ]
+
+// event listener
+function navMenuBtn(){
+  // when nave menu pressed do stuff
+  console.log('naveMenuBtn ran');
+  return openMenu();
+}
+
+function openMenu(){
+  // will display hamburger menu ul
+  console.log("openMenu ran");
+}
+
+// event listeners for menu items
+function homeNavBtn(){
+// function will call a render home function
+console.log('home button ran');
+return renderHomeHtml();
+}
+
+function renderHomeHtml(){
+  // render index.html pg
+}
+function bioNavBtn(){
+  // function will call a render bio page function
+  console.log('bioNavBtn ran');
+  return renderBioHtml;
+}
+
+function renderBioHtml(){
+  // render bio pg html
+}
+
+function booksNavBtn(){
+  // calls function to render books page
+  console.log('booksNavBtn ran');
+  return renderBooksPage() 
+}
+
+function renderBooksPage(){
+  // renders books pg html
+}
+function respondBtnPress(){
+  navMenuBtn()
+  homeNavBtn()
+  bioNavBtn()
+  booksNavBtn()
+}
+
+$(respondBtnPress);
