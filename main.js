@@ -99,6 +99,7 @@ let STORE =[
 // event listener
 function navMenuBtn(){
   // when nave menu pressed do stuff
+  // tag image of menu
   console.log('naveMenuBtn ran');
   return openMenu();
 }
