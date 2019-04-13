@@ -10,10 +10,25 @@ body{
 ul{
   list-style: none;
 }
-
-.js-hidden{
-  display:none;
+/* .navMenuBtn {
+  background: #0277BD;
+  display: flexbox;
+  margin-left: -80px;
+} */
+.menu{
+  display: flexbox;
+  background: #B3E5FC;
+  color: #0277BD;
+  width: 30%;
 }
+menu:hover {
+  cursor: pointer;
+  background: #B3E5FC;
+}
+/* .js-hidden{
+  display:none;
+} */
+
 
 .headerMenu{
   background: #0277BD;
