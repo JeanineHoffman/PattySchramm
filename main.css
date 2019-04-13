@@ -10,16 +10,16 @@ body{
 ul{
   list-style: none;
 }
-/* .navMenuBtn {
-  background: #0277BD;
-  display: flexbox;
-  margin-left: -80px;
-} */
+
 .menu{
   display: flexbox;
   background: #B3E5FC;
   color: #0277BD;
   width: 30%;
+  margin-left: 0;
+}
+.menu li{
+  line-height: 2rem;
 }
 menu:hover {
   cursor: pointer;
@@ -28,7 +28,10 @@ menu:hover {
 /* .js-hidden{
   display:none;
 } */
-
+/* bio:hover bio:active{
+  background: red;
+  color: #B3E5FC;
+} */
 
 .headerMenu{
   background: #0277BD;
@@ -43,7 +46,6 @@ menu:hover {
   display: flexbox;
   flex-direction: row;
   margin: 0;
-
 }
 
 .navMenu{

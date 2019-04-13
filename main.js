@@ -93,7 +93,7 @@ let STORE =[
 //   <h1>Patty Schramm-Author of lesbian fiction</h1>
 //   </nav>
 // </header>`';
-
+let storeIndex =0;
 // event listener
 function navMenuBtn(){
   $('.navBar').on('click', '.navMenu', 'img', function(event){
@@ -105,8 +105,6 @@ function toggleMenuClicked(){
 // when menu img is clicked display menu
 $('.menu').toggle('js-hidden');
 }
-
-
 
 function homeNavBtn(){
 $('.navmenu').on('click', '.home', function(event){
@@ -121,7 +119,25 @@ function renderHomeHtml(){
   // render index.html pg
   return homeHtml;
 }
+// function menuHide(){
+//   $('.menu').on('click', '.bio', '.home', '.books' function(event){
+//     $(this).val();
+//     if (val=== 'bio'){
+//       renderBioHtml();
+//     }
+//     else{
+//       if (val==='books'){
+//        renderBooksPage();
+//       }
+//       else {
+//         if(val==='home'){
+//           render renderHomeHtml();
+//         }
+//       }
 
+//     }
+//   });
+// }
 function bioNavBtn(){
  $('.navBar').on('click','.bio', function(event){
   // function will call a render bio page function
@@ -132,13 +148,13 @@ function renderBioHtml(){
   let bioHtml=`<main role="main">
   <img src="images/Patty2.jpg" alt="Patty Schramm" aria-label="image of Patty Schramm" class="authImg2">
   <article role="article" aria-label="biography section">
-    <p>About the Author</p>
+    <h2>About the Author</h2>
     <p>Patty is the Goldie Award-winning co-editor of Blue Collar Lesbian Erotica with Verda Foster. She and Verda also coedited Women in Uniform: Medics and Soldiers and Cops, Oh My!  and Women In Sports. Her first novel, Souls’ Rescue was a finalist for the Ann Bannon Popular Choice Award. Patty is a retired paramedic and currently resides in The Netherlands with her wife, Sandra, and their kitties.</p>
   </article>
 </main>`;
-return bioHtml;
-}
+$('.pageFocus').html(bioHtml);
 
+}
 function booksNavBtn(){
   $('.navBar').on('click','.books', function(event){
   renderBooksPage(); 
@@ -146,18 +162,20 @@ function booksNavBtn(){
 }
 function renderBooksPage(){ 
  let bookDisplay=`<main role="main">
- <p>Titles by or including Patty Schramm</p>
-
+ <h3>Titles by or including Patty Schramm</h3>
+  <div></div>
  <section class="displayBooks">
-   <p>${STORE[storeIndex].title}</p>
+   <p class="titleDisplay">${STORE[storeIndex].title}</p>
    <img class="bookCover" src="${STORE[storeIndex].cover}" alt="${STORE[storeIndex].coverAlt}">
    <p class="js-blurb">${STORE[storeIndex].blurb}</p>
    <p class="isbn">${STORE[storeIndex].isbn1}</p> 
    <p class="isbnEbook">${STORE[storeIndex].isbn2}</p>
  </section>
 </main>`;
-return booksDisplay;
+$('.pageFocus').html(bookDisplay);
 }
+
+
 function respondBtnPress(){
   navMenuBtn();
   homeNavBtn();
