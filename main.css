@@ -10,11 +10,7 @@ body{
 ul{
   list-style: none;
 }
-/* .navMenuBtn {
-  background: #0277BD;
-  display: flexbox;
-  margin-left: -80px;
-} */
+
 .menu{
   display: flexbox;
   background: #B3E5FC;
@@ -28,7 +24,10 @@ menu:hover {
 /* .js-hidden{
   display:none;
 } */
-
+/* bio:hover bio:active{
+  background: red;
+  color: #B3E5FC;
+} */
 
 .headerMenu{
   background: #0277BD;

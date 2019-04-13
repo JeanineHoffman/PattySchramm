@@ -106,8 +106,6 @@ function toggleMenuClicked(){
 $('.menu').toggle('js-hidden');
 }
 
-
-
 function homeNavBtn(){
 $('.navmenu').on('click', '.home', function(event){
 renderHomeHtml();
@@ -132,13 +130,13 @@ function renderBioHtml(){
   let bioHtml=`<main role="main">
   <img src="images/Patty2.jpg" alt="Patty Schramm" aria-label="image of Patty Schramm" class="authImg2">
   <article role="article" aria-label="biography section">
-    <p>About the Author</p>
+    <h2>About the Author</h2>
     <p>Patty is the Goldie Award-winning co-editor of Blue Collar Lesbian Erotica with Verda Foster. She and Verda also coedited Women in Uniform: Medics and Soldiers and Cops, Oh My!  and Women In Sports. Her first novel, Souls’ Rescue was a finalist for the Ann Bannon Popular Choice Award. Patty is a retired paramedic and currently resides in The Netherlands with her wife, Sandra, and their kitties.</p>
   </article>
 </main>`;
-return bioHtml;
-}
+$('.pageFocus').html(bioHtml);
 
+}
 function booksNavBtn(){
   $('.navBar').on('click','.books', function(event){
   renderBooksPage(); 
@@ -158,6 +156,8 @@ function renderBooksPage(){
 </main>`;
 return booksDisplay;
 }
+
+
 function respondBtnPress(){
   navMenuBtn();
   homeNavBtn();
