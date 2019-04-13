@@ -16,6 +16,10 @@ ul{
   background: #B3E5FC;
   color: #0277BD;
   width: 30%;
+  margin-left: 0;
+}
+.menu li{
+  line-height: 2rem;
 }
 menu:hover {
   cursor: pointer;
@@ -42,7 +46,6 @@ menu:hover {
   display: flexbox;
   flex-direction: row;
   margin: 0;
-
 }
 
 .navMenu{
