@@ -109,23 +109,28 @@ $('.menu').toggle('js-hidden');
 }
 
 function homeNavBtn(){
-$('.navmenu').on('click', '.home', function(event){
-renderHomeHtml();
-});
-  // function will call a render home function
-return renderHomeHtml();
-}
+  $('.navBar').on('click','.home', function(event){
+   
+   renderHomeHtml();
+   $('.menu').toggle('js-hidden');
+ });
+ }
 
 function renderHomeHtml(){
-  let homeHtml=$(`index.html`);
+  let homeHtmlCode=`
+    <main class="pageFocus" role="conterenderHomeHtml()ntinfo">
+    <img class="profileImg" src="images/PattySchramm.jpg" alt="Patty Schramm">
+    </main>
+    <footer role="link" aria-label="contact info">contact <a href="mailto:patty1w75@yahoo.com">Patty Schramm</a> visit <a href="https://www.facebook.com/patty.schramm">Patty on Facebook</a></footer>`;
   // render index.html pg
-  return homeHtml;
+  $('.pageFocus').html(homeHtmlCode);
 }
 
 function bioNavBtn(){
  $('.navBar').on('click','.bio', function(event){
   // function will call a render bio page function
   renderBioHtml();
+  $('.menu').toggle('js-hidden');
 });
 }
 function renderBioHtml(){
@@ -135,13 +140,14 @@ function renderBioHtml(){
     <h2>About the Author</h2>
     <p>Patty is the Goldie Award-winning co-editor of Blue Collar Lesbian Erotica with Verda Foster. She and Verda also coedited Women in Uniform: Medics and Soldiers and Cops, Oh My!  and Women In Sports. Her first novel, Souls’ Rescue was a finalist for the Ann Bannon Popular Choice Award. Patty is a retired paramedic and currently resides in The Netherlands with her wife, Sandra, and their kitties.</p>
   </article>
-</main>`;
+</main> <footer role="link" aria-label="contact info">contact <a href="mailto:patty1w75@yahoo.com">Patty Schramm</a> visit <a href="https://www.facebook.com/patty.schramm">Patty on Facebook</a></footer>`;
 $('.pageFocus').html(bioHtml);
 
 }
 function booksNavBtn(){
   $('.navBar').on('click','.books', function(event){
   renderBooksPage(); 
+  $('.menu').toggle('js-hidden');
 });
 }
 // function getBookInfo{
@@ -158,7 +164,7 @@ function renderBooksPage(){
    <p class="isbn">${STORE[storeIndex].isbn1}</p> 
    <p class="isbnEbook">${STORE[storeIndex].isbn2}</p>
  </section>
-</main>`;
+</main> <footer role="link" aria-label="contact info">contact <a href="mailto:patty1w75@yahoo.com">Patty Schramm</a> visit <a href="https://www.facebook.com/patty.schramm">Patty on Facebook</a></footer>`;
 $('.pageFocus').html(bookDisplay);
 }
 
