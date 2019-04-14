@@ -94,6 +94,8 @@ let STORE =[
 //   </nav>
 // </header>`';
 let storeIndex =0;
+let bookDataLength = STORE.length;
+let bookDataInfo= '$(STORE[storeIndex].map(bookDataLength))';
 // event listener
 function navMenuBtn(){
   $('.navBar').on('click', '.navMenu', 'img', function(event){
@@ -119,25 +121,7 @@ function renderHomeHtml(){
   // render index.html pg
   return homeHtml;
 }
-// function menuHide(){
-//   $('.menu').on('click', '.bio', '.home', '.books' function(event){
-//     $(this).val();
-//     if (val=== 'bio'){
-//       renderBioHtml();
-//     }
-//     else{
-//       if (val==='books'){
-//        renderBooksPage();
-//       }
-//       else {
-//         if(val==='home'){
-//           render renderHomeHtml();
-//         }
-//       }
 
-//     }
-//   });
-// }
 function bioNavBtn(){
  $('.navBar').on('click','.bio', function(event){
   // function will call a render bio page function
@@ -160,6 +144,9 @@ function booksNavBtn(){
   renderBooksPage(); 
 });
 }
+// function getBookInfo{
+
+// }
 function renderBooksPage(){ 
  let bookDisplay=`<main role="main">
  <h3>Titles by or including Patty Schramm</h3>
@@ -175,7 +162,7 @@ function renderBooksPage(){
 $('.pageFocus').html(bookDisplay);
 }
 
-
+// bookDisplay.map.bookDataLength
 function respondBtnPress(){
   navMenuBtn();
   homeNavBtn();

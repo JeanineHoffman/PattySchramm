@@ -21,13 +21,17 @@ ul{
 .menu li{
   line-height: 2rem;
 }
-menu:hover {
+.navBar img:hover{
   cursor: pointer;
   background: #B3E5FC;
 }
-/* .js-hidden{
+.menu:hover {
+  cursor: pointer;
+  background: #B3E5FC;
+}
+.js-hidden{
   display:none;
-} */
+}
 /* bio:hover bio:active{
   background: red;
   color: #B3E5FC;
