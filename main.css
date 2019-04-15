@@ -72,6 +72,9 @@ h1{
   margin-left: 35%;
   margin-top: 5%;
 }
+.js-books-hidden{
+  display: none;
+}
 
 footer{
   background: #0277BD;
@@ -107,3 +110,4 @@ a:hover {
   color: #FDD835;
   cursor: pointer;
 }
+

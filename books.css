@@ -31,6 +31,9 @@ div{
   padding: 3%;
   
 }
+js-books-hidden{
+  display: flexbox;
+}
 .js-blurb{
   width: 80%;
   flex-direction: row;

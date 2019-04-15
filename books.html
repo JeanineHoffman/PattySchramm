@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Patty Schramm</title>
-  <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Kalam|Knewave" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css">  <!-- base layer -->
-  <link rel="stylesheet" type="text/css" media="screen" href="books.css"> 
-  <link rel="stylesheet" type="text/css" media="screen" href="bio.css">
-  <link rel="stylesheet" type="text/css" media="screen" href="blog.css">
-</head>
-<body>
-  <main role="main">
+  
       <p>Titles by or including Patty Schramm</p>
 
       <section class="displayBooks">
@@ -29,7 +15,23 @@
       
   </main>
 
-
+  function renderBooksPage(){ 
+    for (let i = 0; i< STORE.length; i ++){
+      
+      let bookDisplay=`<main role="main" class="pageFocus">
+      <h3>Titles by or including Patty Schramm</h3>
+      <div></div>
+      <section class="displayBooks">
+      <p class="titleDisplay">${STORE[i].title}</p>
+      <img class="bookCover" src="${STORE[i].cover}" alt="${STORE[i].coverAlt}">
+      <p class="js-blurb">${STORE[i].blurb}</p>
+      <p class="isbn">${STORE[i].isbn1}</p> 
+      <p class="isbnEbook">${STORE[i].isbn2}</p>
+      </section>
+      </main>`;
+      $('.pageFocus').append(bookDisplay);
+    }
+  }
 
 
     <script src="main.js"></script>

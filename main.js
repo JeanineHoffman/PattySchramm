@@ -82,17 +82,7 @@ let STORE =[
     coverAlt:"Blue Collar Lesbian Erotica, Patty Schramm and Verda Foster, Editors"
   }
 ];
-// let menuShow = '`<header class="headerMenu" role="banner">
-// <nav role="navigation" class="navBar">
-//   // <img src="images/transparentmenu.png" alt="menu" class="navMenu js-listener">
-//   <ul class="menu js-hidden">
-//     <li>Home</li>
-//     <li>About</li> 
-//     <li>Books</li>
-//   </ul> 
-//   <h1>Patty Schramm-Author of lesbian fiction</h1>
-//   </nav>
-// </header>`';
+
 let storeIndex =0;
 let bookDataLength = STORE.length;
 let bookDataInfo= '$(STORE[storeIndex].map(bookDataLength))';
@@ -128,7 +118,6 @@ function renderHomeHtml(){
 
 function bioNavBtn(){
  $('.navBar').on('click','.bio', function(event){
-  // function will call a render bio page function
   renderBioHtml();
   $('.menu').toggle('js-hidden');
 });
@@ -154,20 +143,26 @@ function booksNavBtn(){
 
 // }
 function renderBooksPage(){ 
- let bookDisplay=`<main role="main">
- <h3>Titles by or including Patty Schramm</h3>
-  <div></div>
- <section class="displayBooks">
-   <p class="titleDisplay">${STORE[storeIndex].title}</p>
-   <img class="bookCover" src="${STORE[storeIndex].cover}" alt="${STORE[storeIndex].coverAlt}">
-   <p class="js-blurb">${STORE[storeIndex].blurb}</p>
-   <p class="isbn">${STORE[storeIndex].isbn1}</p> 
-   <p class="isbnEbook">${STORE[storeIndex].isbn2}</p>
- </section>
-</main> <footer role="link" aria-label="contact info">contact <a href="mailto:patty1w75@yahoo.com">Patty Schramm</a> visit <a href="https://www.facebook.com/patty.schramm">Patty on Facebook</a></footer>`;
-$('.pageFocus').html(bookDisplay);
+  $('.pageFocus').html('');
+  for (let i = 0; i< STORE.length; i ++){
+    
+    let bookDisplay=`<main role="main" class="pageFocus">
+    
+    <section class="displayBooks">
+    <p class="titleDisplay">${STORE[i].title}</p>
+    <img class="bookCover" src="${STORE[i].cover}" alt="${STORE[i].coverAlt}">
+    <p class="js-blurb">${STORE[i].blurb}</p>
+    <p class="isbn">${STORE[i].isbn1}</p> 
+    <p class="isbnEbook">${STORE[i].isbn2}</p>
+    </section>
+    </main>`;
+    $('.pageFocus').append(bookDisplay);
+  }
 }
-
+// function returnAllBooks(){
+//  let fullStore= $(STORE[storeIndex].map(bookDataLength));
+//  $('pageFocuse').html(bookDisplay)
+// }
 // bookDisplay.map.bookDataLength
 function respondBtnPress(){
   navMenuBtn();
