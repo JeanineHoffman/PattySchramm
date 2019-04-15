@@ -21,13 +21,17 @@ ul{
 .menu li{
   line-height: 2rem;
 }
-menu:hover {
+.navBar img:hover{
   cursor: pointer;
   background: #B3E5FC;
 }
-/* .js-hidden{
+.menu:hover {
+  cursor: pointer;
+  background: #B3E5FC;
+}
+.js-hidden{
   display:none;
-} */
+}
 /* bio:hover bio:active{
   background: red;
   color: #B3E5FC;
@@ -68,6 +72,9 @@ h1{
   margin-left: 35%;
   margin-top: 5%;
 }
+.js-books-hidden{
+  display: none;
+}
 
 footer{
   background: #0277BD;
@@ -103,3 +110,4 @@ a:hover {
   color: #FDD835;
   cursor: pointer;
 }
+

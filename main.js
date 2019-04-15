@@ -82,18 +82,10 @@ let STORE =[
     coverAlt:"Blue Collar Lesbian Erotica, Patty Schramm and Verda Foster, Editors"
   }
 ];
-// let menuShow = '`<header class="headerMenu" role="banner">
-// <nav role="navigation" class="navBar">
-//   // <img src="images/transparentmenu.png" alt="menu" class="navMenu js-listener">
-//   <ul class="menu js-hidden">
-//     <li>Home</li>
-//     <li>About</li> 
-//     <li>Books</li>
-//   </ul> 
-//   <h1>Patty Schramm-Author of lesbian fiction</h1>
-//   </nav>
-// </header>`';
+
 let storeIndex =0;
+let bookDataLength = STORE.length;
+let bookDataInfo= '$(STORE[storeIndex].map(bookDataLength))';
 // event listener
 function navMenuBtn(){
   $('.navBar').on('click', '.navMenu', 'img', function(event){
@@ -107,41 +99,27 @@ $('.menu').toggle('js-hidden');
 }
 
 function homeNavBtn(){
-$('.navmenu').on('click', '.home', function(event){
-renderHomeHtml();
-});
-  // function will call a render home function
-return renderHomeHtml();
-}
+  $('.navBar').on('click','.home', function(event){
+   
+   renderHomeHtml();
+   $('.menu').toggle('js-hidden');
+ });
+ }
 
 function renderHomeHtml(){
-  let homeHtml=$(`index.html`);
+  let homeHtmlCode=`
+    <main class="pageFocus" role="conterenderHomeHtml()ntinfo">
+    <img class="profileImg" src="images/PattySchramm.jpg" alt="Patty Schramm">
+    </main>
+    <footer role="link" aria-label="contact info">contact <a href="mailto:patty1w75@yahoo.com">Patty Schramm</a> visit <a href="https://www.facebook.com/patty.schramm">Patty on Facebook</a></footer>`;
   // render index.html pg
-  return homeHtml;
+  $('.pageFocus').html(homeHtmlCode);
 }
-// function menuHide(){
-//   $('.menu').on('click', '.bio', '.home', '.books' function(event){
-//     $(this).val();
-//     if (val=== 'bio'){
-//       renderBioHtml();
-//     }
-//     else{
-//       if (val==='books'){
-//        renderBooksPage();
-//       }
-//       else {
-//         if(val==='home'){
-//           render renderHomeHtml();
-//         }
-//       }
 
-//     }
-//   });
-// }
 function bioNavBtn(){
  $('.navBar').on('click','.bio', function(event){
-  // function will call a render bio page function
   renderBioHtml();
+  $('.menu').toggle('js-hidden');
 });
 }
 function renderBioHtml(){
@@ -151,31 +129,41 @@ function renderBioHtml(){
     <h2>About the Author</h2>
     <p>Patty is the Goldie Award-winning co-editor of Blue Collar Lesbian Erotica with Verda Foster. She and Verda also coedited Women in Uniform: Medics and Soldiers and Cops, Oh My!  and Women In Sports. Her first novel, Souls’ Rescue was a finalist for the Ann Bannon Popular Choice Award. Patty is a retired paramedic and currently resides in The Netherlands with her wife, Sandra, and their kitties.</p>
   </article>
-</main>`;
+</main> <footer role="link" aria-label="contact info">contact <a href="mailto:patty1w75@yahoo.com">Patty Schramm</a> visit <a href="https://www.facebook.com/patty.schramm">Patty on Facebook</a></footer>`;
 $('.pageFocus').html(bioHtml);
 
 }
 function booksNavBtn(){
   $('.navBar').on('click','.books', function(event){
   renderBooksPage(); 
+  $('.menu').toggle('js-hidden');
 });
 }
+// function getBookInfo{
+
+// }
 function renderBooksPage(){ 
- let bookDisplay=`<main role="main">
- <h3>Titles by or including Patty Schramm</h3>
-  <div></div>
- <section class="displayBooks">
-   <p class="titleDisplay">${STORE[storeIndex].title}</p>
-   <img class="bookCover" src="${STORE[storeIndex].cover}" alt="${STORE[storeIndex].coverAlt}">
-   <p class="js-blurb">${STORE[storeIndex].blurb}</p>
-   <p class="isbn">${STORE[storeIndex].isbn1}</p> 
-   <p class="isbnEbook">${STORE[storeIndex].isbn2}</p>
- </section>
-</main>`;
-$('.pageFocus').html(bookDisplay);
+  $('.pageFocus').html('');
+  for (let i = 0; i< STORE.length; i ++){
+    
+    let bookDisplay=`<main role="main" class="pageFocus">
+    
+    <section class="displayBooks">
+    <p class="titleDisplay">${STORE[i].title}</p>
+    <img class="bookCover" src="${STORE[i].cover}" alt="${STORE[i].coverAlt}">
+    <p class="js-blurb">${STORE[i].blurb}</p>
+    <p class="isbn">${STORE[i].isbn1}</p> 
+    <p class="isbnEbook">${STORE[i].isbn2}</p>
+    </section>
+    </main>`;
+    $('.pageFocus').append(bookDisplay);
+  }
 }
-
-
+// function returnAllBooks(){
+//  let fullStore= $(STORE[storeIndex].map(bookDataLength));
+//  $('pageFocuse').html(bookDisplay)
+// }
+// bookDisplay.map.bookDataLength
 function respondBtnPress(){
   navMenuBtn();
   homeNavBtn();
