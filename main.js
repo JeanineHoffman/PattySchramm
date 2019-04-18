@@ -109,9 +109,7 @@ function homeNavBtn(){
 function renderHomeHtml(){
   let homeHtmlCode=`
     <main class="pageFocus" role="conterenderHomeHtml()ntinfo">
-    <img class="profileImg" src="images/PattySchramm.jpg" alt="Patty Schramm">
-    </main>
-    <footer role="link" aria-label="contact info">contact <a href="mailto:patty1w75@yahoo.com">Patty Schramm</a> visit <a href="https://www.facebook.com/patty.schramm">Patty on Facebook</a></footer>`;
+    <img class="profileImg" src="images/PattySchramm.jpg" alt="Patty Schramm"></main>`;
   // render index.html pg
   $('.pageFocus').html(homeHtmlCode);
 }
@@ -123,47 +121,38 @@ function bioNavBtn(){
 });
 }
 function renderBioHtml(){
-  let bioHtml=`<main role="main">
-  <img src="images/Patty2.jpg" alt="Patty Schramm" aria-label="image of Patty Schramm" class="authImg2">
+  let bioHtml=`<img src="images/Patty2.jpg" alt="Patty Schramm" aria-label="image of Patty Schramm" class="authImg2">
   <article role="article" aria-label="biography section">
     <h2>About the Author</h2>
     <p>Patty is the Goldie Award-winning co-editor of Blue Collar Lesbian Erotica with Verda Foster. She and Verda also coedited Women in Uniform: Medics and Soldiers and Cops, Oh My!  and Women In Sports. Her first novel, Souls’ Rescue was a finalist for the Ann Bannon Popular Choice Award. Patty is a retired paramedic and currently resides in The Netherlands with her wife, Sandra, and their kitties.</p>
-  </article>
-</main> <footer role="link" aria-label="contact info">contact <a href="mailto:patty1w75@yahoo.com">Patty Schramm</a> visit <a href="https://www.facebook.com/patty.schramm">Patty on Facebook</a></footer>`;
+  </article>`;
 $('.pageFocus').html(bioHtml);
 
 }
 function booksNavBtn(){
   $('.navBar').on('click','.books', function(event){
+    console.log('booksbtn');
   renderBooksPage(); 
+  $('.mainPgImg').toggle('js-books-hidden');
   $('.menu').toggle('js-hidden');
 });
 }
-// function getBookInfo{
 
-// }
 function renderBooksPage(){ 
-  $('.pageFocus').html('');
+  
   for (let i = 0; i< STORE.length; i ++){
     
-    let bookDisplay=`<main role="main" class="pageFocus">
-    
-    <section class="displayBooks">
+    let bookDisplay=`
+    <div class="booksDiv"></div>
     <p class="titleDisplay">${STORE[i].title}</p>
     <img class="bookCover" src="${STORE[i].cover}" alt="${STORE[i].coverAlt}">
     <p class="js-blurb">${STORE[i].blurb}</p>
     <p class="isbn">${STORE[i].isbn1}</p> 
-    <p class="isbnEbook">${STORE[i].isbn2}</p>
-    </section>
-    </main>`;
-    $('.pageFocus').append(bookDisplay);
+    <p class="isbnEbook">${STORE[i].isbn2}</p>`;
+    $('.displayBooks').append(bookDisplay);
   }
 }
-// function returnAllBooks(){
-//  let fullStore= $(STORE[storeIndex].map(bookDataLength));
-//  $('pageFocuse').html(bookDisplay)
-// }
-// bookDisplay.map.bookDataLength
+
 function respondBtnPress(){
   navMenuBtn();
   homeNavBtn();

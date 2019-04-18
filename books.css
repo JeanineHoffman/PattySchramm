@@ -40,3 +40,8 @@ js-books-hidden{
   padding: 3%;
   line-height: 2rem;
 }
+.booksDiv{
+  margin-top: 9%;
+  color: #0277BD;
+  border-radius: 5px;
+}

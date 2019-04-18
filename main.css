@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+  /* font-size: 16px; */
 }
 
 body{
@@ -10,7 +11,9 @@ body{
 ul{
   list-style: none;
 }
-
+.js-hidden{
+  display: none;
+}
 .menu{
   display: flexbox;
   background: #B3E5FC;
@@ -29,9 +32,7 @@ ul{
   cursor: pointer;
   background: #B3E5FC;
 }
-.js-hidden{
-  display:none;
-}
+
 /* bio:hover bio:active{
   background: red;
   color: #B3E5FC;
@@ -41,8 +42,8 @@ ul{
   background: #0277BD;
   color: #b71c1c;
   width: 80%;
-  height: 7em;
-  font-size: 2.5em;
+  height: 8em;
+  /* font-size: 4em; */
   margin: 0 auto;
   display: inline-flexbox;
 }
@@ -56,13 +57,13 @@ ul{
   display: inline-flexbox;
   flex-direction: row;
   width:8%;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 h1{
   display: inline-flexbox;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.25em;
   margin-top: -7%;
   
 }
@@ -74,13 +75,15 @@ h1{
 }
 .js-books-hidden{
   display: none;
+  padding-top: 8%;
 }
 
 footer{
   background: #0277BD;
   color: #b71c1c;
   width: 80%;
-  font-size: 2rem;
+  height: 3rem;
+  font-size: 2.5rem;
   margin: 2% auto;
 }
 
