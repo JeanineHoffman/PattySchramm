@@ -6,7 +6,7 @@
   float: left;
   width: 25%;
   margin-left: 5%;
-  margin-top: 5%;
+  margin-top: 10%;
   padding-top: 2%;
   /* margin-left:38%; */
   justify-content: center;
@@ -14,7 +14,7 @@
 }
 h2{
   width: 70%;
-  margin: 3% auto;
+  margin: 6% auto;
   font-size: 2.6em;
   color: #b71c1c;
   border: 1px solid #0277BD;
@@ -95,7 +95,7 @@ p{
   }
   .authImg2{
     float: left;
-    width: 28%;
+    width: 2%;
     margin-left: 5%;
     margin-top: 1%;
     clear: both;
@@ -104,7 +104,7 @@ p{
     width: 60%;
     font-size: 2.4em;
     float: right;
-    margin-right: 4%;;
+    margin-right: 4%;
     text-align: center;
   }
 }
