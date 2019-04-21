@@ -4,7 +4,9 @@
 .displayBooks{
   display: flexbox;
 }
-
+.jsBio{
+  display: none;
+}
 h3{
   color: #0277BD;
   font-size: 2.8em;
@@ -14,12 +16,12 @@ h3{
 div{
    border:4px solid #0277BD;
   width: 80%;
-  height: 5%;
   margin: 0 auto;
 }
 .titleDisplay{
   font-size: 1.8rem;
   text-align: center;
+  margin: 0 auto;
 }
 .pageFocus{
   color: #0277BD;
@@ -27,21 +29,67 @@ div{
 .bookCover{
   float: left;
   margin-left: 3%;
-  width: 30%;
+  /* max-width: 200px; */
+  width: 15em;
   padding: 3%;
-  
 }
 js-books-hidden{
   display: flexbox;
 }
-.js-blurb{
+.js-blurb{ 
   width: 80%;
   flex-direction: row;
-  padding: 3%;
-  line-height: 2rem;
+  padding: 5%;
+  line-height: 2.2rem;
+  font-size: 1.2rem;
+  margin-left: 12%;
 }
 .booksDiv{
-  margin-top: 9%;
+  margin: 5% auto;
   color: #0277BD;
+  background-color: #0277BD;
   border-radius: 5px;
+}
+.isbn .isbnEbook{
+  font-size: .5em;
+}
+
+@media (min-width:320px){
+  .js-blurb{ 
+    width: 88%;
+    flex-direction: row;
+    padding: 5%;
+    line-height: 2.2rem;
+    font-size: 1.4rem;
+    margin-left: 10%;
+  }
+  .bookCover{
+    float: left;
+    margin-left: 2%;
+    /* max-width: 200px; */
+    width: 7em;
+    padding: 3%;
+  }
+}
+@media (min-width:750px){
+  .js-blurb{ 
+    width: 88%;
+    flex-direction: row;
+    padding: 5%;
+    line-height: 2.2rem;
+    font-size: 1.5rem;
+    margin-left: 10%;
+  }
+  .bookCover{
+    float: left;
+    margin-left: 2%;
+    /* max-width: 200px; */
+    width: 13em;
+    padding: 3%;
+  }
+}
+@media (min-width:1024px), (max-width: 1224px){
+  .bookCover{
+    width: 15rem;
+  }
 }
