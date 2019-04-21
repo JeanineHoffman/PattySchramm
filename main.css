@@ -23,8 +23,8 @@ ul{
   margin-left: 0;
 }
 .menu li{
-  line-height: 2rem;
-  font-size: 1.3em;
+  line-height: 1.5rem;
+  font-size: 1em;
 }
 .navBar img:hover{
   cursor: pointer;
