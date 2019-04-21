@@ -68,8 +68,9 @@ h1{
   display: inline-flexbox;
   text-align: right;
   font-size: 2em;
-  margin-top: -10%;
-  padding: 2%
+  margin-top: -8%;
+  padding: 2%;
+  margin-right: 4%; 
 }
 .buybookstag{
   font-size: 2rem;
