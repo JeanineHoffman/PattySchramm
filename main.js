@@ -108,8 +108,19 @@ function homeNavBtn(){
 
 function renderHomeHtml(){
   let homeHtmlCode=`
-    <main class="pageFocus" role="conterenderHomeHtml()ntinfo">
-    <img class="profileImg" src="images/PattySchramm.jpg" alt="Patty Schramm"></main>`;
+    <section class="pageFocus" role="contentinfo">
+    <h3>Where to find Patty's books:</h3>
+    <ul aria-label="links to purchase books" class="buyBooks">
+      <li><a href="https://www.bellabooks.com/category/author-patty-schramm/">Bella Books</a></li>
+      <li><a href="https://www.amazon.com/Patty-Schramm/e/B01KYJFW22?ref=sr_ntt_srch_lnk_1&qid=1555594000&sr=8-1">Amazon</a></li>
+      <li><a href="https://www.kobo.com/us/en/search?query=patty+schramm">Kobo</a></li>
+      <li><a href="https://www.barnesandnoble.com/s/patty+schramm?_requestid=2575857">Nook</a></li>
+    </ul>
+    <section class="mainPgImg" aria-roledescription="image holder">
+      <img class="profileImg js-profileImg" src="images/PattySchramm.jpg" alt="Patty Schramm">
+    </section>
+    <section class="displayBooks"></section>
+    </section>`;
   // render index.html pg
   $('.pageFocus').html(homeHtmlCode);
 }
@@ -120,20 +131,24 @@ function bioNavBtn(){
   $('.menu').toggle('js-hidden');
 });
 }
+
 function renderBioHtml(){
-  let bioHtml=`<img src="images/Patty2.jpg" alt="Patty Schramm" aria-label="image of Patty Schramm" class="authImg2">
-  <article role="article" aria-label="biography section">
+  let bioHtml=`<section aria-label="bio" class="bioContainer"> <img src="images/Patty2.jpg" alt="Patty Schramm" aria-label="image of Patty Schramm" class="authImg2 js-bio">
+  <article  class="js-bio" role="article" aria-label="biography section">
     <h2>About the Author</h2>
     <p>Patty is the Goldie Award-winning co-editor of Blue Collar Lesbian Erotica with Verda Foster. She and Verda also coedited Women in Uniform: Medics and Soldiers and Cops, Oh My!  and Women In Sports. Her first novel, Souls’ Rescue was a finalist for the Ann Bannon Popular Choice Award. Patty is a retired paramedic and currently resides in The Netherlands with her wife, Sandra, and their kitties.</p>
-  </article>`;
+  </article>
+  </section>
+  <section class="displayBooks"></section>`;
 $('.pageFocus').html(bioHtml);
-
 }
+
 function booksNavBtn(){
   $('.navBar').on('click','.books', function(event){
     console.log('booksbtn');
   renderBooksPage(); 
   $('.mainPgImg').toggle('js-books-hidden');
+  $('.bioContainer').toggle('js-bio'); 
   $('.menu').toggle('js-hidden');
 });
 }
