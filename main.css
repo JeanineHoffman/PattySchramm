@@ -276,11 +276,16 @@ a:hover {
   }
 }
 
-@media (min-width: 1220px), (max-width:1230px){
+@media (min-width: 1220px), (max-width:1400px){
   header{
   /* width: %; */
-  font-size: 1.7em;
-  margin-top: 1%;
+  font-size: 1.5em;
+  margin-top: 2%;
+  padding-right: 5%; 
+  }
+  ul{
+    font-size: .75rem;
+    line-height: 2em;
   }
   .navMenu{
     width: 10%;
@@ -289,8 +294,9 @@ a:hover {
   .buybookstag{
     font-size: 3.5rem;
   }
-  ul{
-    font-size: 2.2rem;
+  .menu li{
+    line-height: 2.6rem;
+    font-size: 1.4em;
   }
   footer{
     width: 80%;
