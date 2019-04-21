@@ -67,9 +67,9 @@ ul{
 h1{
   display: inline-flexbox;
   text-align: right;
-  font-size: 1.75em;
+  font-size: 1.9em;
   margin-top: -7%;
-  padding: 1%
+  padding: 2%
 }
 .buybookstag{
   font-size: 2rem;
@@ -284,7 +284,7 @@ a:hover {
   padding-right: 5%; 
   }
   ul{
-    font-size: .75rem;
+    font-size: 1rem;
     line-height: 2em;
   }
   .navMenu{
