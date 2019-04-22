@@ -88,11 +88,12 @@ let bookDataLength = STORE.length;
 let bookDataInfo= '$(STORE[storeIndex].map(bookDataLength))';
 // event listener
 function navMenuBtn(){
-  $('.navBar').on('click', '.navMenu', 'img', function(event){
+  $('.navBar').on('click', '.navMenu', 'img', function (event){
     console.log('naveMenuBtn ran');
     toggleMenuClicked();
   });
 }
+
 function toggleMenuClicked(){
 // when menu img is clicked display menu
 $('.menu').toggle('js-hidden');
